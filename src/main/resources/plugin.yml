@@ -1,0 +1,8 @@
+name: Core
+version: ${project.version}
+main: dev.cougar.core.Core
+api-version: 1.0-SNAPHSOT
+authors: [Cougar Development Team]
+description: Server Core
+softdepend:
+  - LunarClient-API

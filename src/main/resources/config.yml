@@ -1,0 +1,116 @@
+MONGO:
+  CONNECTION_STRING: ''
+REDIS:
+  HOST: 127.0.0.1
+  PORT: 6379
+  AUTHENTICATION:
+    ENABLED: false
+    PASSWORD: ''
+SETTINGS:
+  PREFIX_ENABLED: true
+  UPDATE_PLAYER_LIST_NAME: true
+  HUB_NAME: "hub-01"
+  GEOIP_DOWNLOD: "https://www.dropbox.com/s/fj5xgvzcz1i2gba/GeoLite2-Country.mmdb?dl=1"
+  2FA_ENABLED: true
+  HELP_MESSAGE:
+    - "This is line 1 of help"
+    - "Please change me"
+    - "this message is also for &4&l/media /ts /discord..."
+    - "you name it"
+ANNOUNCEMENTS:
+  ENABLED: false
+  TIME: 1
+  LIST: []
+PUNISHMENTS:
+  BROADCAST: "&r{target} &ahas been {context} by &r{sender}"
+  BROADCAST_SILENT: "&7[Silent] &r{target} &ahas been {context} by &r{sender}"
+  BLACKLIST: "&cYour account is BLACKLISTED from &6&lKoru Network.\nReason: &e{reason}\n\n&cThis punishment may not be appealed"
+  BAN:
+    KICK: "&cYour account is {context} from &6&lKoru Network.\nReason: &e{reason}\n{temporary}\n\n&cIf you feel this punishment is unjust, you may appeal at:\n&fhttps://www.koru.rip\n&dPunishment ID: {id}\n&cBanned by {author}"
+    TEMPORARY: "\n&cThis punishment expires in &e{time-remaining}&c."
+  KICK:
+    KICK: "&cYou were kicked by a staff member.\nReason: &e{reason}"
+COMMON:
+  KICK_CLOSED_TESTING: "&cHey &f{0}!&c You should acquire a luckperms at our store to be able to enter."
+  COLOR-TAG-ENABLED: true
+  SERVER-OPTION: true
+  SERVER-COMMAND: "/practiceoptions"
+COMMON_ERRORS:
+  FAILED_TO_LOAD_PROFILE: "&cFailed to load your profile. Try again later."
+  COULD_NOT_RESOLVE_PLAYER: "&cCould not resolve player information..."
+  PLAYER_NOT_FOUND: "&cA player with that name could not be found."
+  RANK_NOT_FOUND: "&cA luckperms with that name could not be found."
+  UNEXPECTED_ERROR: "&cAn unexpected error. Please contact a high staff member with this: &f{0}"
+SECURITY:
+  SETUP_NEEDED: "&cYou must setup your TOTP. Please authenticate your account."
+  SETUP_EXISTS: "&cYou have already setup your TOTP authentication."
+  SETUP_DONE: "&cYou will only see this message once. Use this in your TOTP Application: &a{0}"
+  AUTH_RESET: "&aYou have reset {0}&a's TOTP setup."
+  AUTH_INVALIDATE: "&aYou have invalidated {0}&a's authentication."
+  AUTH_INVALID: "&cCode invalid, please try again later."
+  AUTH_VALID: "&aYou are now authenticated!"
+  AUTH_REQUIRED: "&cYou must first authenticate your account."
+  ALREADY_AUTH: "&cYou are already authenticated!"
+STAFF:
+  SPAWN_COMMAND: true
+  STAFFMODE-ENABLED: true
+  STAFFCHAT-ENABLED: true
+  VISIBILITY_ENGINE: true
+  AUTH_SUCCESS: "&9[S] &b({1}) &r{0} &ahas authenticated successfully"
+  AUTH_FAIL: "&9[S] &b({1}) &r{0} &ahas &4&lfailed &ato authenticate"
+  CHAT: "&9[S] &b({1}) &r{0}&7: {2}"
+  FROZEN_CHAT: "&3[&bFROZEN&3] &f{1}: &7{2}"
+  JOIN_NETWORK: "&9[S] &r{0} &ajoined the network &2({1})"
+  LEAVE_NETWORK: "&9[S] &r{0} &aleft the network &2({1})"
+  SWITCH_SERVER: "&9[S] &r{0} &ajoined {1} &2(from {2})"
+  FREEZE:
+    - "&9&m-------------------------------------------"
+    - "&bYou have been frozen by {1}"
+    - "&bDo not logout and follow {1}&b's instructions."
+    - "&bLogging out whist frozen will result in a &c&lPERMANENT BAN"
+    - "&dTeamspeak: &7ts.koru.rip"
+    - "&9&m-------------------------------------------"
+  UNFREEZE_MESSAGE: "&9[S] &b({2}) {0} &ehas been &6unfrozen &eby {1}"
+  FREEZE_MESSAGE: "&9[S] &b({2}) {0} &ehas been &6frozen &eby {1}"
+  REPORT_BROADCAST:
+    - "&9[R] &b[{3}] &r{1} &7reported by &r{0}"
+    - "   &9Reason&7: {2}"
+  REQUEST_BROADCAST:
+    - "&9[R] &b[{2}] &r{0} &7has requested assistance"
+    - "   &9Reason&7: {1}"
+  REQUEST_SUBMITTED: "&aYour request for assistance has been submitted to all available staff members."
+  SOCIAL_SPY: "&7(Social-Spy) &7(To &r{1} &c-> {5}{3}&7) %MSG%"
+CHAT:
+  FORMAT: "%1$s&r: %2$s"
+  CLEAR_CHAT_BROADCAST: "&eThe chat has been cleared by &r{0}"
+  CLEAR_CHAT_FOR_STAFF: false
+  MUTE_CHAT_BROADCAST: "&eThe chat has been {0} by &r{1}"
+  DELAY_CHAT_ENABLED_BROADCAST: "&eThe chat has been delayed by &r{0} &7({1} second{2})"
+  DELAY_CHAT_DISABLED_BROADCAST: "&eThe chat delay has been lifted by &r{0}"
+  CHAT_DELAYED: "&cSlow down! You may chat again in {0} seconds."
+ESSENTIAL:
+  DONOR_ONY: false
+  COMMAND_BLOCK:
+    - "/gm c"
+# using both text formatter and text replacing because I need to escape colors in the input message
+# format: player name, player display name, player color, target name, target display name, target color
+CONVERSATION:
+  SEND_MESSAGE: "&7{6}(To &r{5}{4}&7{6}) %MSG%"
+  RECEIVE_MESSAGE: "&7{6}(From &r{5}{4}&7{6}) %MSG%"
+OPTIONS:
+  GLOBAL_CHAT_ENABLED: "&eYou can now see global chat."
+  GLOBAL_CHAT_DISABLED: "&cYou will no longer see global chat."
+  TIPS_ENABLED: "&eYou can now see tips."
+  TIPS_DISABLE: "&cYou will no longer see tips."
+  SCOREBOARD_ENABLE: "&eYou can now see scoreboard."
+  SCOREBOARD_DISABLE: "&cYou will no longer see scoreboard."
+  PRIVATE_MESSAGES_ENABLED: "&aYou can now receive new s."
+  PRIVATE_MESSAGES_DISABLED: "&cYou can no longer receive new conversations. If you start a conversation with a player, they will be able to message you back."
+  PRIVATE_MESSAGE_SOUNDS_ENABLED: "&eYou enabled private message sounds."
+  PRIVATE_MESSAGE_SOUNDS_DISABLED: "&cYou disabled private message sounds."
+GLOBAL_WHITELIST:
+  KICK_MAINTENANCE: "&cThe server is currently in maintenance.\nCheck our discord for more announcements!"
+  KICK_CLOSED_TESTING: "&cYou are not whitelisted. To gain early access, you can\npurchase an eligible luckperms &7(&6RankName&7) &con our store.\n&fhttps://store.koru.rip"
+DISABLED_COMMANDS:
+  - "mod"
+  - "vanish"
